@@ -1,0 +1,189 @@
+/*
+ * Plugin Name: Novel AI Chatbot
+ * Plugin URI: https://novelnetware.com/novel-ai-chatbot
+ * Description: Styles for the admin area of the Novel AI Chatbot plugin.
+ * Version: 1.7.3
+ * Author: Novelnetware
+ * Support Email: info@novelnetware.com
+ */
+ /*
+ * Table of Contents:
+ * 1. Admin menu styles
+ * 2. General admin page styles
+ * 3. Post Types checkboxes
+ * 4. AI selection styles
+ * 5. Sitemap info styles
+ */
+
+/* Custom background color for the menu item */
+#adminmenu li#toplevel_page_novel-ai-chatbot-settings > a {
+    background-color: #002CC1 !important;
+    color: #fff !important;
+}
+
+#adminmenu li#toplevel_page_novel-ai-chatbot-settings > a .wp-menu-image img {
+    opacity: 1 !important;
+}
+
+#adminmenu #toplevel_page_novel-ai-chatbot-settings.menu-top-last a.menu-top,
+#adminmenu #toplevel_page_novel-ai-chatbot-settings.menu-top-last:hover a.menu-top,
+#adminmenu #toplevel_page_novel-ai-chatbot-settings.menu-top-last.current a.menu-top {
+    background-color: #002CC1 !important;
+    color: #fff !important;
+}
+
+#adminmenu #toplevel_page_novel-ai-chatbot-settings.current a.menu-top {
+    background-color: #001A7A !important;
+    color: #fff !important;
+}
+
+/* General admin page styles (optional, can be expanded) */
+.novel-ai-chatbot-settings-page .wrap {
+    margin-top: 20px;
+}
+
+.novel-ai-chatbot-settings-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.novel-ai-chatbot-settings-page .form-table th {
+    width: 200px;
+}
+
+.novel-ai-chatbot-settings-page .form-table input[type="text"],
+.novel-ai-chatbot-settings-page .form-table select {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Styles for the Post Types checkboxes */
+.novel-ai-chatbot-post-types-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.novel-ai-chatbot-post-types-list label {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    flex-direction: row-reverse !important;
+}
+
+.novel-ai-chatbot-post-types-list label:hover {
+    background-color: #e0e0e0;
+}
+
+.novel-ai-chatbot-post-types-list input[type="checkbox"] {
+    margin-right: 8px !important;
+    margin-left: 0 !important;
+}
+
+.novel-ai-chatbot-post-types-list input[type="checkbox"]:checked + span {
+    font-weight: bold;
+    color: #3B82F6;
+}
+
+/* Styles for AI selection */
+.novel-ai-chatbot-ai-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.novel-ai-chatbot-ai-selection label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 120px; /* Adjust as needed */
+    text-align: center;
+}
+
+.novel-ai-chatbot-ai-selection label:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+.novel-ai-chatbot-ai-selection input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.novel-ai-chatbot-ai-selection input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #3B82F6;
+}
+
+.novel-ai-chatbot-ai-selection input[type="radio"]:checked + span + .ai-logo {
+    transform: scale(1.1);
+}
+
+.novel-ai-chatbot-ai-selection .ai-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Specific logos (placeholders) */
+.novel-ai-chatbot-ai-selection .ai-logo.openai {
+    /* Background image or SVG if available */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>'); /* Placeholder */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.novel-ai-chatbot-ai-selection .ai-logo.gemini {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>'); /* Placeholder */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.novel-ai-chatbot-ai-selection .ai-logo.deepseek {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3"></path><path d="M15 1v3"></path><path d="M9 20v3"></path><path d="M15 20v3"></path><path d="M20 9h3"></path><path d="M20 15h3"></path><path d="M1 9h3"></path><path d="M1 15h3"></path></svg>'); /* Placeholder */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Sitemap detection info */
+.sitemap-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e0f2f7; /* Light blue */
+    border: 1px solid #b3e5fc;
+    border-radius: 5px;
+    font-size: 0.9em;
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif !important;
+}
+
+.sitemap-info.error {
+    background-color: #ffebee; /* Light red */
+    border-color: #ef9a9a;
+}
+
+.sitemap-info a {
+    text-decoration: underline;
+}
+
+.novel-ai-chatbot-settings-page, .novel-ai-chatbot-settings-page .wrap, .novel-ai-chatbot-settings-page .form-table, .novel-ai-chatbot-settings-page .form-table th, .novel-ai-chatbot-settings-page .form-table td, .novel-ai-chatbot-post-types-list, .novel-ai-chatbot-ai-selection, .sitemap-info {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif !important;
+}
